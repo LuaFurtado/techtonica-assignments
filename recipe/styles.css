@@ -15,3 +15,9 @@ h2 {
   font-family: 'Poppins', sans-serif;
   color: #5A3825;
 }
+h1, h2 {
+  color: #5A3825; 
+
+p {
+  color: #4B3D36;
+}
