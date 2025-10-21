@@ -38,6 +38,11 @@ h2 {
   display: block;
   clear: both;
 }
+body {
+  background-color: #FFF8E7;
+  margin-left: 17%;
+  margin-right: 18%;
+}
 
 .left,
 .right {
