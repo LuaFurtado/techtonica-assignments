@@ -16,6 +16,17 @@ h1 {
   text-align: center;
   font-size: 3rem;
 }
+.makeColorful {
+  font-family: 'Pacifico', cursive;
+  background: linear-gradient(90deg,
+  #009b3a 0%, 
+  #ffdf00 50%,
+  #002776 100% 
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 h2 {
   font-family: 'Poppins', sans-serif;
