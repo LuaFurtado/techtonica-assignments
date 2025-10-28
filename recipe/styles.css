@@ -16,6 +16,7 @@ h1 {
   text-align: center;
   font-size: 3rem;
 }
+
 .makeColorful {
   font-family: 'Pacifico', cursive;
   background: linear-gradient(90deg,
@@ -28,6 +29,7 @@ h1 {
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+
 h2 {
   font-family: 'Poppins', sans-serif;
   color: #5A3825;
@@ -99,30 +101,45 @@ footer {
     display: block;
   }
 }
+
+/* Navbar chocolate (estilo marrom) */
 .navbar-chocolate {
-  background-color: #5c3317;
+  background-color: #3e2723;
   color: white;
 }
+
 .navbar-chocolate a {
   color: white;
 }
+
 .navbar-chocolate a:hover {
   color: #ffb84d;
-}
-/* Mantém sua aparência, só garante contraste e ícone */
-.navbar-chocolate {
-  background-color: #3e2723; /* sua cor chocolate */
 }
 
 .navbar-chocolate .navbar-brand,
 .navbar-chocolate .nav-link {
-  color: #fff;               /* links legíveis no marrom */
+  color: #fff;
 }
 
 .navbar-chocolate .nav-link.active {
-  color: #ffd7c2;            /* sutil pro item ativo */
+  color: #ffd7c2;
 }
 
 .navbar-chocolate .navbar-toggler {
-  border-color: rgba(255,255,255,.55);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+/* Estilo para blocos de links com fundo chocolate */
+.bg-chocolate {
+  background-color: #3e2723;
+  color: white;
+}
+
+.bg-chocolate a {
+  color: white;
+  text-decoration: none;
+}
+
+.bg-chocolate a:hover {
+  color: #ffb84d;
 }
