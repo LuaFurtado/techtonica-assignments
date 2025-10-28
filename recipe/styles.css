@@ -109,3 +109,20 @@ footer {
 .navbar-chocolate a:hover {
   color: #ffb84d;
 }
+/* Mantém sua aparência, só garante contraste e ícone */
+.navbar-chocolate {
+  background-color: #3e2723; /* sua cor chocolate */
+}
+
+.navbar-chocolate .navbar-brand,
+.navbar-chocolate .nav-link {
+  color: #fff;               /* links legíveis no marrom */
+}
+
+.navbar-chocolate .nav-link.active {
+  color: #ffd7c2;            /* sutil pro item ativo */
+}
+
+.navbar-chocolate .navbar-toggler {
+  border-color: rgba(255,255,255,.55);
+}
