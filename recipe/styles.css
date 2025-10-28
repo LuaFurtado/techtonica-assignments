@@ -99,3 +99,13 @@ footer {
     display: block;
   }
 }
+.navbar-chocolate {
+  background-color: #5c3317;
+  color: white;
+}
+.navbar-chocolate a {
+  color: white;
+}
+.navbar-chocolate a:hover {
+  color: #ffb84d;
+}
