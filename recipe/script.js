@@ -20,3 +20,5 @@ attributesToTranslate.forEach(({ attributeSuffix, attributeName }) => {
     if (translatedAttribute != null) element.setAttribute(attributeName, translatedAttribute);
   });
 });
+let currentLanguage = navigator.language.startsWith("pt") ? "pt" : "en";
+applyLanguage(currentLanguage);
