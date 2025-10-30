@@ -14,3 +14,13 @@ function applyLanguage(language) {
     document.title = "Brazilian Carrot Cake — Recipe";
   }
 }
+const toggleButton = document.getElementById("translate-toggle");
+let currentLanguage = "en";
+if (toggleButton) {
+    toggleButton.addEventListener("click", () => {
+        currentLanguage = currentLanguage === "en" ? "pt" : "en"; // Ternary Operator
+        applyLanguage(currentLanguage);
+        toggleButton.textContent =
+        currentLanguage === "pt" ? "View in English" : "Ver em Português";
+    });
+}
