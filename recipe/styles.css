@@ -15,7 +15,9 @@ h1 {
   color: #5A3825;
   text-align: center;
   font-size: 3rem;
+  margin-top: 2rem;
 }
+
 .makeColorful {
   font-family: 'Pacifico', cursive;
   background: linear-gradient(90deg,
@@ -28,6 +30,7 @@ h1 {
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+
 h2 {
   font-family: 'Poppins', sans-serif;
   color: #5A3825;
@@ -98,4 +101,44 @@ footer {
     margin: 0 auto;
     display: block;
   }
+}
+
+.navbar-chocolate {
+  background-color: #3e2723;
+  color: white;
+}
+
+.navbar-chocolate a {
+  color: white;
+}
+
+.navbar-chocolate a:hover {
+  color: #ffb84d;
+}
+
+.navbar-chocolate .navbar-brand,
+.navbar-chocolate .nav-link {
+  color: #fff;
+}
+
+.navbar-chocolate .nav-link.active {
+  color: #ffd7c2;
+}
+
+.navbar-chocolate .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.bg-chocolate {
+  background-color: #3e2723;
+  color: white;
+}
+
+.bg-chocolate a {
+  color: white;
+  text-decoration: none;
+}
+
+.bg-chocolate a:hover {
+  color: #ffb84d;
 }
