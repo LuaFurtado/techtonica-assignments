@@ -22,3 +22,10 @@ attributesToTranslate.forEach(({ attributeSuffix, attributeName }) => {
 });
 let currentLanguage = navigator.language.startsWith("pt") ? "pt" : "en";
 applyLanguage(currentLanguage);
+const translationArea = document.getElementById("translate-area") || document.body;
+const supportsHover = window.matchMedia("(hover: hover)").matches;
+
+if (supportsHover) {
+  translationArea.addEventListener("mouseenter", () => applyLanguage("pt"));
+  translationArea.addEventListener("mouseleave", () => applyLanguage("en"));
+}
