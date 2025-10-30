@@ -142,3 +142,19 @@ footer {
 .bg-chocolate a:hover {
   color: #ffb84d;
 }
+.btn-translate {
+  background-color: transparent;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-translate:hover {
+  background-color: #ffb84d;
+  color: #3e2723; /* chocolate */
+  border-color: #ffb84d;
+  cursor: pointer;
+}
