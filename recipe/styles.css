@@ -142,3 +142,15 @@ footer {
 .bg-chocolate a:hover {
   color: #ffb84d;
 }
+/* ===============================
+   Tradução — visibilidade do botão
+   =============================== */
+#translate-toggle {
+  display: none; /* Esconde em desktop */
+}
+
+@media (hover: none) {
+  #translate-toggle {
+    display: inline-block; /* Mostra no mobile/tablet */
+  }
+}
