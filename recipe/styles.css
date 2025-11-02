@@ -69,12 +69,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
+  gap: 50px;
+  padding: 0 10px;
 }
 
 .left,
 .right {
-  width: 600px;
+  width: 590px;
   text-align: left;
 }
 
