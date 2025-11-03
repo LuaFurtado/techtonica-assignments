@@ -18,15 +18,6 @@ h2 {
   margin-top: 2rem;
 }
 
-img {
-  filter: grayscale(100%);
-  transition: filter 0.5s easy;
-}
-
-img:hover {
-  filter: grayscale(0%);
-}
-
 p {
   color: #4B3D36;
   font-size: 1.2rem;
@@ -167,6 +158,5 @@ footer {
     height: auto;
     margin: 0 auto;
     display: block;
-    filter: grayscale(0%);
 }
 }
