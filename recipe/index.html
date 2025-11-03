@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Brazilian Carrot Cake — Recipe</title>
 
-   <link
+  <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
@@ -14,10 +14,13 @@
 
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/paper@0.12.15/dist/paper-full.min.js"></script>
   <script src="script.js" defer></script>
 </head>
-<body>
 
+<body>
+<canvas id="myCanvas" resize style="width: 100%; height: 100vh;"></canvas>
  <header class="bg-light">
   <nav class="navbar navbar-expand-lg navbar-chocolate">
     <div class="container">
@@ -77,6 +80,13 @@
   <section id="ingredients" class="left col-12 col-lg-6">
 
       <div>
+        <img
+    id="mona"
+    src="https://conteudo.imguol.com.br/c/entretenimento/54/2022/02/22/bolo-de-cenoura---eu-mereco-1645533548938_v2_4x3.jpg"
+    alt="Brazilian carrot cake with brigadeiro frosting"
+    class="img-fluid"
+    style="display: none;"
+  />
         <div class="image-section">
           <img
   src="https://conteudo.imguol.com.br/c/entretenimento/54/2022/02/22/bolo-de-cenoura---eu-mereco-1645533548938_v2_4x3.jpg"
@@ -229,12 +239,111 @@
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   crossorigin="anonymous"
 ></script>
-
-</body>
-  <footer>
+ <footer>
     <hr>
    <p data-en="🍰 My first project – Recipe Page • Techtonica 2025 • Made by Luana 🇧🇷"
      data-pt="🍰 Meu primeiro projeto – Página de Receita • Techtonica 2025 • Feito por Luana 🇧🇷">
     🍰 My first project – Recipe Page • Techtonica 2025 • Made by Luana 🇧🇷
   </footer>
+<script type="text/paperscript" canvas="myCanvas">
+  var path, position, max;
+  var count = 0;
+  var grow = false;
+
+  var raster = new Raster('mona');
+  raster.visible = false;
+  raster.on('load', resetSpiral);
+
+  var text = new PointText({
+    justification: 'right',
+    fontSize: 12,
+    content: window.FileReader
+      ? 'drag & drop an image from your desktop to rasterize it'
+      : 'to drag & drop images, please use Webkit, Firefox, Chrome or IE 10'
+  });
+
+  function onFrame(event) {
+    if (grow) {
+      if (raster.loaded && (view.center - position).length < max) {
+        for (var i = 0, l = count / 36 + 1; i < l; i++) {
+          growSpiral();
+        }
+        path.smooth();
+      } else {
+        grow = false;
+      }
+    }
+  }
+
+  function growSpiral() {
+    count++;
+    var vector = new Point({
+      angle: count * 5,
+      length: count / 100
+    });
+    var rot = vector.rotate(90);
+    var color = raster.getAverageColor(position + vector / 2);
+    var value = color ? (1 - color.gray) * 3.7 : 0;
+    rot.length = Math.max(value, 0.2);
+    path.add(position + vector - rot);
+    path.insert(0, position + vector + rot);
+    position += vector;
+  }
+
+  function resetSpiral() {
+    grow = true;
+    raster.fitBounds(view.bounds);
+
+    if (path) path.remove();
+
+    position = view.center;
+    count = 0;
+    path = new Path({
+      fillColor: 'black',
+      closed: true
+    });
+
+    max = Math.min(raster.bounds.width, raster.bounds.height) * 0.5;
+  }
+
+  function onResize() {
+    if (raster.loaded) resetSpiral();
+    text.point = view.bounds.bottomRight - [30, 30];
+  }
+
+  function onKeyDown(event) {
+    if (event.key == 'space') {
+      path.selected = !path.selected;
+    }
+  }
+
+  function onDocumentDrag(event) {
+    event.preventDefault();
+  }
+
+  function onDocumentDrop(event) {
+    event.preventDefault();
+
+    var file = event.dataTransfer.files[0];
+    var reader = new FileReader();
+
+    reader.onload = function (event) {
+      var image = document.createElement('img');
+      image.onload = function () {
+        raster = new Raster(image);
+        raster.visible = false;
+        resetSpiral();
+      };
+      image.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  document.addEventListener('drop', onDocumentDrop, false);
+  document.addEventListener('dragover', onDocumentDrag, false);
+  document.addEventListener('dragleave', onDocumentDrag, false);
+</script>
+
+</body>
+ 
 </html>
