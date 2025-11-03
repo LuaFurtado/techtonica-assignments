@@ -23,7 +23,7 @@ img {
   transition: filter 0.5s easy;
 }
 
-img:hoover {
+img:hover {
   filter: grayscale(0%);
 }
 
