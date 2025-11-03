@@ -167,5 +167,6 @@ footer {
     height: auto;
     margin: 0 auto;
     display: block;
-  }
+    filter: grayscale(0%);
+}
 }
