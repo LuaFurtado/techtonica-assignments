@@ -3,6 +3,21 @@ body {
   text-align: center;
 }
 
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #5A3825;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #5A3825;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
 p {
   color: #4B3D36;
   font-size: 1.2rem;
@@ -10,12 +25,8 @@ p {
   line-height: 1.6;
 }
 
-h1 {
-  font-family: 'Pacifico', cursive;
-  color: #5A3825;
-  text-align: center;
-  font-size: 3rem;
-  margin-top: 2rem;
+li {
+  font-size: 1.2rem;
 }
 
 .makeColorful {
@@ -31,14 +42,11 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-h2 {
-  font-family: 'Poppins', sans-serif;
-  color: #5A3825;
-  font-size: 1.6rem;
-}
-
-li {
-  font-size: 1.2rem;
+.centralize {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
 }
 
 .description {
@@ -50,27 +58,12 @@ li {
 .left,
 .right,
 footer {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .left > div,
 .right > div {
-  margin-bottom: 20px;
-}
-
-.image-section img {
-  width: 600px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.centralize {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 50px;
-  padding: 0 10px;
+  margin-bottom: 10px;
 }
 
 .left,
@@ -79,29 +72,11 @@ footer {
   text-align: left;
 }
 
-@media (max-width: 900px) {
-  body {
-    margin: 0;
-    padding: 0 12px;
-  }
-
-  .centralize {
-    display: block;
-  }
-
-  .left,
-  .right {
-    width: min(600px, 92vw);
-    margin: 0 auto 24px;
-    display: block;
-  }
-
-  .image-section img {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
+.image-section img {
+  width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .navbar-chocolate {
@@ -143,6 +118,7 @@ footer {
 .bg-chocolate a:hover {
   color: #ffb84d;
 }
+
 .btn-translate {
   background-color: transparent;
   color: white;
@@ -155,7 +131,32 @@ footer {
 
 .btn-translate:hover {
   background-color: #ffb84d;
-  color: #3e2723; /* chocolate */
+  color: #3e2723;
   border-color: #ffb84d;
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  body {
+    margin: 0;
+    padding: 0 12px;
+  }
+
+  .centralize {
+    display: block;
+  }
+
+  .left,
+  .right {
+    width: min(600px, 92vw);
+    margin: 0 auto 24px;
+    display: block;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
 }
