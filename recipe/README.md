@@ -71,16 +71,32 @@ Below is a breakdown of each Bootstrap class used and how it was applied in my p
 
 ### 💻 JavaScript Bootstrap Requirements
 
-To enable navbar toggle and other components, I also included the Bootstrap JavaScript bundle:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+To enable navbar toggle and other components, I also included the Bootstrap JavaScript bundle
 
 ## 🎨 Custom CSS and Media Query
 
-While Bootstrap handled most of the responsive layout and utility classes,  
-I wrote custom CSS to **fine-tune the design**, make it more visually aligned with my brand,  
-and handle some layout details that Bootstrap doesn’t cover by default.
+While Bootstrap handled most of the responsive layout and utility classes,
+I wrote custom CSS to:
+
+Apply a Brazilian gradient effect (🇧🇷 green, yellow, blue) in the page title
+
+Create a fixed Easter Egg animation (Mariah Carey GIF)
+
+Control layout behavior on smaller screens (like setting max widths and showing/hiding elements)
+
+Adjust images inside custom containers for responsiveness
+
+Here's an overview of some choices:
+
+| Feature                            | Bootstrap Handles?          | Why I Used Custom CSS                                         |
+| ---------------------------------- | --------------------------- | ------------------------------------------------------------- |
+| 2-column → 1-column layout         | ✅ Yes (`col-12 col-lg-6`)   | But I wanted to **cap width to 600px** for better readability |
+| Navbar responsiveness              | ✅ Yes (`navbar-expand-lg`)  | No need for custom CSS here                                   |
+| Padding around body on mobile      | ❌ No                        | Bootstrap doesn’t modify global body padding                  |
+| Custom text gradient               | ❌ No                        | Only possible via CSS (`background-clip: text`)               |
+| Image sizing within custom wrapper | ⚠️ Partially (`.img-fluid`) | I needed full width + centering inside `.image-section`       |
+| Easter Egg visibility control      | ❌ No                        | Managed via CSS classes: `.hidden`, `.visible` & transitions  |
+
 
 ### 💡 Why Custom CSS?
 
@@ -93,7 +109,7 @@ Some design elements needed:
 
 Below is my actual Media Query and an explanation of what each line does ⬇️
 
-```css
+css
 @media (max-width: 900px) {
   body {
     margin: 0;               /* Removes default browser margin */
@@ -138,170 +154,59 @@ I implemented the following DOM features:
 
 ### 🌎 1. Language Toggle (English 🇺🇸 ⇄ Portuguese 🇧🇷)
 
-Users can toggle between **English** and **Portuguese** by clicking a button in the navbar.
+Users can toggle between English and Portuguese by clicking a button in the navbar.
 
-```js
-function applyLanguage(language) {
-  const key = language === "pt" ? "pt" : "en";
+✨ This feature updates text based on custom attributes in the HTML. Curious? Check out the applyLanguage() function in /script.js.
 
-  document.querySelectorAll("[data-pt]").forEach((element) => {
-    const text = element.getAttribute(`data-${key}`);
-    if (text !== null) {
-      element.textContent = text;
-    }
-  });
+🎤 2. Easter Egg – Click 3x to Reveal Mariah Carey GIF
 
-  document.title = key === "pt"
-    ? "Receita de Bolo de Cenoura"
-    : "Brazilian Carrot Cake — Recipe";
-}
-✅ What this does:
+An invisible GIF appears when the user clicks the main recipe image three times.
 
-Selects all elements with the custom attribute [data-pt]
+🎉 Explore how this trigger works (hint: it's a combo of click counter and CSS classes). Logic is in script.js.
 
-Reads the data-en or data-pt content, depending on user’s selected language
+🎤 2. Easter Egg – Click 3x to Reveal Mariah Carey GIF
 
-Updates the text content of each element using .textContent
+An invisible GIF appears when the user clicks the main recipe image three times.
 
-Dynamically updates the 🔖 page title too
-
-🔗 DOM Method Used:
-querySelectorAll
-
-✅ What this does:
-
-Selects all elements with the custom attribute [data-pt]
-
-Reads the data-en or data-pt content, depending on user’s selected language
-
-Updates the text content of each element using .textContent
-
-Dynamically updates the 🔖 page title too
-
-DOM Method Used: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
-textContent: https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
-
-🎤 2. Easter Egg – Click 3x to reveal Mariah Carey GIF
-
-An invisible GIF appears when the user clicks the main recipe image three times in a row.
-
-let clickCount = 0;
-const img = document.getElementById("recipeImage");
-const mariah = document.getElementById("mariah");
-
-img.addEventListener("click", () => {
-  clickCount++;
-
-  if (clickCount === 3) {
-    mariah.classList.remove("hidden");
-
-    setTimeout(() => mariah.classList.add("visible"), 100);
-    setTimeout(() => {
-      mariah.classList.remove("visible");
-      setTimeout(() => mariah.classList.add("hidden"), 500);
-    }, 4000);
-
-    clickCount = 0;
-  }
-});
-
-✅ What this does:
-
-Listens for a click event on the main image
-
-Counts the number of clicks, resets after 3
-
-Adds/removes CSS classes (hidden, visible) to reveal the GIF
-
-Automatically hides the GIF after a timeout
-
-🔗 DOM Methods Used:
-
-getElementById: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
-addEventListener: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-classList: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+🎉 Explore how this trigger works (hint: it's a combo of click counter and CSS classes). Logic is in script.js.
 
 🎉 3. Bubble Animation with Paper.js
-I added a visual bubble animation in the website background using the Paper.js library.
+
+Floating bubbles animate in the background using the Paper.js library.
+
+✨ I used PaperScope, Path.Circle, and onFrame to make this effect. Full code is in the initBubbleEffect() function in /script.js.
 🧪 What is Paper.js?
 
-Paper.js is an open-source vector graphics scripting framework that runs on top of the HTML5 Canvas element.
-It allows you to easily create and animate shapes, paths, and artwork using JavaScript — without needing deep knowledge of low-level canvas drawing operations.
+Paper.js is an open-source vector graphics scripting framework that runs on top of the HTML5 <canvas> element. It allows you to draw and animate shapes using JavaScript without needing to worry about lower-level canvas details.
 
-🧱 Paper.js gives you:
+🧱 What Paper.js offers:
 
-A clean API for creating and styling shapes like circles, lines, and curves
+A simple and expressive API for creating graphics like circles, paths, and curves
 
-Built-in animation tools using onFrame
+Built-in animation support through onFrame
 
-Support for mathematical operations, mouse interaction, and physics-like movement
+Helpers for math and geometry, mouse interaction, and physics-like behavior
 
-A visual programming experience ideal for creative coding and generative art
+A great starting point for creative coding and generative visuals
 
-🖼️ In this project, I used Paper.js to draw and animate floating bubbles in the background, making the UI more dynamic and cheerful!
+🖼️ How Paper.js is used in this project:
 
-🔗 Official site: http://paperjs.org/
+I used Paper.js to create floating bubbles in the background of the website that move from the bottom to the top of the screen. This adds a playful, dynamic visual layer to the page — especially fun when paired with the cake and animated Easter Egg!
 
-📚 Beginner tutorial: http://paperjs.org/tutorials/getting-started/using-javascript-directly/
+🔗 Official website: http://paperjs.org/
 
-function initBubbleEffect() {
-  const canvas = document.getElementById("bubbleCanvas");
-  if (!canvas) return;
+📚 Beginner tutorial (used for reference): http://paperjs.org/tutorials/getting-started/using-javascript-directly/
 
-  const bubbleScope = new paper.PaperScope();
-  bubbleScope.setup(canvas);
+✨ Curious how the bubble effect was implemented? Check out the initBubbleEffect() function inside script.js.
 
-  const { width, height } = bubbleScope.view.size;
-  const colors = ["#41B883", "#FDDD62", "#6CB6FF"];
-  const bubbles = [];
+🔗 Resources
 
-  function createBubble() {
-    const side = Math.random() < 0.5 ? "left" : "right";
-    const x = side === "left" ? width * 0.05 : width * 0.95;
-    const y = height + 20;
-    const radius = Math.random() * 15 + 10;
+Bootstrap Docs — https://getbootstrap.com/
 
-    const circle = new bubbleScope.Path.Circle({
-      center: [x + (Math.random() * 20 - 10), y],
-      radius,
-      fillColor: colors[Math.floor(Math.random() * colors.length)],
-      opacity: 0.7,
-    });
+Paper.js Docs — http://paperjs.org/
 
-    bubbles.push({
-      circle,
-      speed: Math.random() * 1 + 0.5,
-    });
-  }
+MDN: querySelectorAll() — https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 
-  setInterval(createBubble, 1000);
+MDN: textContent — https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
 
-  bubbleScope.view.onFrame = () => {
-    bubbles.forEach((bubble, index) => {
-      bubble.circle.position.y -= bubble.speed;
-      if (bubble.circle.position.y < -50) {
-        bubble.circle.remove();
-        bubbles.splice(index, 1);
-      }
-    });
-  };
-}
-✅ What this does:
-
-Creates animated bubbles using a <canvas> element
-
-Uses setInterval and Paper.js drawing API for visual effects
-
-Runs independently of user input
-
-🔗 Paper.js Docs: http://paperjs.org/reference/global/
-
-| Feature           | DOM Methods                                   | Why?                             |
-| ----------------- | --------------------------------------------- | -------------------------------- |
-| Text translation  | `querySelectorAll`, `textContent`             | Lightweight, dynamic update      |
-| Easter Egg reveal | `addEventListener`, `classList`, `setTimeout` | Fun & interactive feature        |
-| Bubble animation  | Paper.js via `Path.Circle`                    | Adds visual polish to background |
-
-
-
-✅ Made with 💛 by Luana
+✅ Made with 💛 and ☕ by Luana
