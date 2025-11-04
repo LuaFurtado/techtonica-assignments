@@ -107,42 +107,6 @@ Some design elements needed:
 - **Media Query behavior** not covered by Bootstrap, like content caps and padding
 - Detailed **image control** inside custom containers
 
-Below is my actual Media Query and an explanation of what each line does ⬇️
-
-css
-@media (max-width: 900px) {
-  body {
-    margin: 0;               /* Removes default browser margin */
-    padding: 0 12px;         /* Adds light padding so content isn’t touching the edges */
-  }
-
-  .centralize {
-    display: block;          /* Disable Flexbox on small screens for stacking layout */
-  }
-
-  .left,
-  .right {
-    width: min(600px, 92vw); /* Max width of 600px but adapts for smaller screens */
-    margin: 0 auto 24px;     /* Center and add spacing below each section */
-    display: block;          /* Makes sure content stacks vertically in mobile view */
-  }
-
-  .image-section img {
-    width: 100%;             /* Make images fully responsive within parent container */
-    height: auto;            /* Maintain proportional scaling */
-    margin: 0 auto;          /* Center the image */
-    display: block;          /* Ensure it behaves like a block-level element */
-  }
-}
-
-| Feature                            | Bootstrap Handles?          | Why I Used Custom CSS                                         |
-| ---------------------------------- | --------------------------- | ------------------------------------------------------------- |
-| 2-column → 1-column layout         | ✅ Yes (`col-12 col-lg-6`)   | But I wanted to **cap width to 600px** for better readability |
-| Navbar responsiveness              | ✅ Yes (`navbar-expand-lg`)  | No need for custom CSS here                                   |
-| Padding around body on mobile      | ❌ No                        | Bootstrap doesn’t modify global body padding                  |
-| Custom text gradient               | ❌ No                        | Only possible via CSS (`background-clip: text`)               |
-| Image sizing within custom wrapper | ⚠️ Partially (`.img-fluid`) | I needed full width + centering inside `.image-section`       |
-| Easter Egg visibility control      | ❌ No                        | Managed via CSS classes: `.hidden`, `.visible` & transitions  |
 
 ## 🧠 JavaScript – DOM Manipulation
 
