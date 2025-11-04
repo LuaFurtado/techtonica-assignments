@@ -8,12 +8,9 @@ function applyLanguage(language) {
     }
   });
 
-  if (key === "pt") {
-    document.title = "Receita de Bolo de Cenoura";
-  } else {
-    document.title = "Brazilian Carrot Cake — Recipe";
-  }
+  document.title = key === "pt" ? "Receita de Bolo de Cenoura" : "Brazilian Carrot Cake — Recipe";
 }
+
 const toggleButton = document.getElementById("translate-toggle");
 let currentLanguage = "en";
 
@@ -28,21 +25,21 @@ if (toggleButton) {
         : "🇧🇷 Ver em Português";
   });
 
-
   toggleButton.innerHTML = "🇧🇷 Ver em Português";
 }
 
 
+
 function initBubbleEffect() {
-  const canvas = document.getElementById('bubbleCanvas');
+  const canvas = document.getElementById("bubbleCanvas");
   if (!canvas) return;
 
-  paper.setup(canvas);
+  const bubbleScope = new paper.PaperScope();
+  bubbleScope.setup(canvas);
 
-  const { width, height } = paper.view.size;
+  const { width, height } = bubbleScope.view.size;
   const colors = ['#41B883', '#FDDD62', '#6CB6FF'];
   const bubbles = [];
-
 
   function createBubble() {
     const side = Math.random() < 0.5 ? 'left' : 'right';
@@ -50,7 +47,7 @@ function initBubbleEffect() {
     const y = height + 20;
     const radius = Math.random() * 15 + 10;
 
-    const circle = new paper.Path.Circle({
+    const circle = new bubbleScope.Path.Circle({
       center: [x + (Math.random() * 20 - 10), y],
       radius,
       fillColor: colors[Math.floor(Math.random() * colors.length)],
@@ -63,14 +60,11 @@ function initBubbleEffect() {
     });
   }
 
-  
   setInterval(createBubble, 1000);
 
-
-  paper.view.onFrame = () => {
+  bubbleScope.view.onFrame = () => {
     bubbles.forEach((bubble, index) => {
       bubble.circle.position.y -= bubble.speed;
-
       if (bubble.circle.position.y < -50) {
         bubble.circle.remove();
         bubbles.splice(index, 1);
@@ -80,5 +74,5 @@ function initBubbleEffect() {
 }
 
 window.addEventListener('load', () => {
-  if (window.paper) initBubbleEffect();
+  initBubbleEffect();
 });
