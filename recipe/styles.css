@@ -18,6 +18,18 @@ h2 {
   margin-top: 2rem;
 }
 
+/* Bolinhas na lateral do site */
+#bubbleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* não bloqueia interação */
+  z-index: -1; /* fica atrás de tudo */
+}
+
+
 p {
   color: #4B3D36;
   font-size: 1.2rem;

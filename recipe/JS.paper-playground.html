@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paper.js Playground</title>
+
+  <!-- Importando o Paper.js -->
+  <script src="https://unpkg.com/paper@0.12.15/dist/paper-full.min.js"></script>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    /* O canvas ocupa toda a tela */
+    #paper-canvas {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      background: #fffaf4; /* cor creme suave */
+    }
+  </style>
+</head>
+<body>
+  <canvas id="paper-canvas"></canvas>
+
+  <script>
+    // 1) Configura o canvas para ocupar a tela
+    const canvas = document.getElementById('paper-canvas');
+
+    function resizeCanvas() {
+      canvas.width  = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      // Atualiza o tamanho da view do Paper.js ao redimensionar
+      paper.view.viewSize = new paper.Size(canvas.width, canvas.height);
+    });
+
+    // 2) Inicializa o Paper.js no canvas
+    paper.setup(canvas);
+
+    // 3) Desenha um círculo laranja no centro
+    const center = paper.view.center;
+    const circle = new paper.Path.Circle({
+      center,
+      radius: Math.min(paper.view.size.width, paper.view.size.height) * 0.15,
+      fillColor: '#ff9f45' // laranja suave
+    });
+
+    // 4) Anima o círculo com efeito de pulsar
+    let growing = true;
+    paper.view.onFrame = (event) => {
+      const r = circle.bounds.width / 2;
+      const maxR = Math.min(paper.view.size.width, paper.view.size.height) * 0.2;
+      const minR = Math.min(paper.view.size.width, paper.view.size.height) * 0.12;
+      const delta = 0.8;
+
+      if (growing) {
+        circle.scale(1 + delta/200);
+        if (r >= maxR) growing = false;
+      } else {
+        circle.scale(1 - delta/200);
+        if (r <= minR) growing = true;
+      }
+    };
+
+    // 5) Interações do mouse — desenha linhas tipo "chocolate"
+    let path = null;
+    paper.view.onMouseDown = (event) => {
+      path = new paper.Path({
+        strokeColor: '#6f4e37', // cor chocolate
+        strokeWidth: 6,
+        strokeCap: 'round',
+        strokeJoin: 'round'
+      });
+      path.add(event.point);
+    };
+
+    paper.view.onMouseDrag = (event) => {
+      path.add(event.point);
+    };
+
+    paper.view.onMouseUp = () => {
+      if (path) path.simplify();
+    };
+  </script>
+</body>
+</html>

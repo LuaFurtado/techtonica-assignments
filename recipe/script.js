@@ -24,3 +24,54 @@ if (toggleButton) {
         currentLanguage === "pt" ? "View in English" : "Ver em Português";
     });
 }
+// Inicializa bolhas nas laterais com Paper.js
+function initBubbleEffect() {
+  const canvas = document.getElementById('bubbleCanvas');
+  if (!canvas) return;
+
+  paper.setup(canvas);
+
+  const { width, height } = paper.view.size;
+  const colors = ['#41B883', '#FDDD62', '#6CB6FF'];
+  const bubbles = [];
+
+  // Cria bolhas nas laterais
+  function createBubble() {
+    const side = Math.random() < 0.5 ? 'left' : 'right';
+    const x = side === 'left' ? width * 0.05 : width * 0.95;
+    const y = height + 20;
+    const radius = Math.random() * 15 + 10;
+
+    const circle = new paper.Path.Circle({
+      center: [x + (Math.random() * 20 - 10), y],
+      radius,
+      fillColor: colors[Math.floor(Math.random() * colors.length)],
+      opacity: 0.7
+    });
+
+    bubbles.push({
+      circle,
+      speed: Math.random() * 1 + 0.5
+    });
+  }
+
+  // Gera bolhas a cada intervalo
+  setInterval(createBubble, 1000);
+
+  // Animação
+  paper.view.onFrame = () => {
+    bubbles.forEach((bubble, index) => {
+      bubble.circle.position.y -= bubble.speed;
+
+      // Remove bolha ao sair da tela
+      if (bubble.circle.position.y < -50) {
+        bubble.circle.remove();
+        bubbles.splice(index, 1);
+      }
+    });
+  };
+}
+
+window.addEventListener('load', () => {
+  if (window.paper) initBubbleEffect();
+});
