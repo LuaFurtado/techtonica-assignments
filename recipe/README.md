@@ -111,7 +111,6 @@ Some design elements needed:
 ## 🧠 JavaScript – DOM Manipulation
 
 This project uses JavaScript to dynamically control content and user interactions in the webpage.
-
 I implemented the following DOM features:
 
 ---
@@ -119,46 +118,33 @@ I implemented the following DOM features:
 ### 🌎 1. Language Toggle (English 🇺🇸 ⇄ Portuguese 🇧🇷)
 
 Users can toggle between English and Portuguese by clicking a button in the navbar.
-
 ✨ This feature updates text based on custom attributes in the HTML. Curious? Check out the applyLanguage() function in /script.js.
 
-🎤 2. Easter Egg – Click 3x to Reveal Mariah Carey GIF
+### 🎤 2. Easter Egg – Click 3x to Reveal Mariah Carey GIF
 
 An invisible GIF appears when the user clicks the main recipe image three times.
 
-🎉 Explore how this trigger works (hint: it's a combo of click counter and CSS classes). Logic is in script.js.
-
-🎤 2. Easter Egg – Click 3x to Reveal Mariah Carey GIF
-
-An invisible GIF appears when the user clicks the main recipe image three times.
-
-🎉 Explore how this trigger works (hint: it's a combo of click counter and CSS classes). Logic is in script.js.
-
-🎉 3. Bubble Animation with Paper.js
+### 🎉 3. Bubble Animation with Paper.js
 
 Floating bubbles animate in the background using the Paper.js library.
-
 ✨ I used PaperScope, Path.Circle, and onFrame to make this effect. Full code is in the initBubbleEffect() function in /script.js.
-🧪 What is Paper.js?
+
+### 🧪 What is Paper.js?
 
 Paper.js is an open-source vector graphics scripting framework that runs on top of the HTML5 <canvas> element. It allows you to draw and animate shapes using JavaScript without needing to worry about lower-level canvas details.
 
-🧱 What Paper.js offers:
+### 🧱 What Paper.js offers:
 
-A simple and expressive API for creating graphics like circles, paths, and curves
+- A simple and expressive API for creating graphics like circles, paths, and curves
+- Built-in animation support through onFrame
+- Helpers for math and geometry, mouse interaction, and physics-like behavior
+- A great starting point for creative coding and generative visuals
 
-Built-in animation support through onFrame
+### 🖼️ How Paper.js is used in this project:
 
-Helpers for math and geometry, mouse interaction, and physics-like behavior
-
-A great starting point for creative coding and generative visuals
-
-🖼️ How Paper.js is used in this project:
-
-I used Paper.js to create floating bubbles in the background of the website that move from the bottom to the top of the screen. This adds a playful, dynamic visual layer to the page — especially fun when paired with the cake and animated Easter Egg!
+I used Paper.js to create floating bubbles in the background of the website that move from the bottom to the top of the screen. This adds a playful, dynamic visual layer to the page.
 
 🔗 Official website: http://paperjs.org/
-
 📚 Beginner tutorial (used for reference): http://paperjs.org/tutorials/getting-started/using-javascript-directly/
 
 ✨ Curious how the bubble effect was implemented? Check out the initBubbleEffect() function inside script.js.
@@ -166,11 +152,8 @@ I used Paper.js to create floating bubbles in the background of the website that
 🔗 Resources
 
 Bootstrap Docs — https://getbootstrap.com/
-
 Paper.js Docs — http://paperjs.org/
-
 MDN: querySelectorAll() — https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
-
 MDN: textContent — https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
 
 ✅ Made with 💛 and ☕ by Luana
