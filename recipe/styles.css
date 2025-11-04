@@ -143,6 +143,8 @@ footer {
 
 #mariah {
   position: fixed;
+  top: 20px;
+  left: 370px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   z-index: 9999;
