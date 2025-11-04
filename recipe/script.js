@@ -28,8 +28,6 @@ if (toggleButton) {
   toggleButton.innerHTML = "🇧🇷 Ver em Português";
 }
 
-
-
 function initBubbleEffect() {
   const canvas = document.getElementById("bubbleCanvas");
   if (!canvas) return;
@@ -75,4 +73,27 @@ function initBubbleEffect() {
 
 window.addEventListener('load', () => {
   initBubbleEffect();
+
+  let clickCount = 0;
+  const img = document.getElementById("recipeImage");
+  const mariah = document.getElementById("mariah");
+
+  img.addEventListener("click", () => {
+    clickCount++;
+
+    if (clickCount === 3) {
+      mariah.classList.remove("hidden");
+
+      setTimeout(() => {
+        mariah.classList.add("visible");
+      }, 100);
+
+      setTimeout(() => {
+        mariah.classList.remove("visible");
+        setTimeout(() => mariah.classList.add("hidden"), 500);
+      }, 4000);
+
+      clickCount = 0;
+    }
+  });
 });

@@ -40,11 +40,7 @@ li {
 
 .makeColorful {
   font-family: 'Pacifico', cursive;
-  background: linear-gradient(90deg,
-    #009b3a 0%, 
-    #ffdf00 50%,
-    #002776 100%
-  );
+  background: linear-gradient(90deg, #009b3a 0%, #ffdf00 50%, #002776 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -145,6 +141,24 @@ footer {
   cursor: pointer;
 }
 
+#mariah {
+  position: left;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 9999;
+}
+
+#mariah.visible {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+
 @media (max-width: 900px) {
   body {
     margin: 0;
@@ -167,5 +181,5 @@ footer {
     height: auto;
     margin: 0 auto;
     display: block;
-}
+  }
 }
