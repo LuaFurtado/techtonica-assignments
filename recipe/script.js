@@ -16,15 +16,23 @@ function applyLanguage(language) {
 }
 const toggleButton = document.getElementById("translate-toggle");
 let currentLanguage = "en";
+
 if (toggleButton) {
-    toggleButton.addEventListener("click", () => {
-        currentLanguage = currentLanguage === "en" ? "pt" : "en"; // Ternary Operator
-        applyLanguage(currentLanguage);
-        toggleButton.textContent =
-        currentLanguage === "pt" ? "View in English" : "Ver em Português";
-    });
+  toggleButton.addEventListener("click", () => {
+    currentLanguage = currentLanguage === "en" ? "pt" : "en";
+    applyLanguage(currentLanguage);
+
+    toggleButton.innerHTML =
+      currentLanguage === "pt"
+        ? "🇺🇸 View in English"
+        : "🇧🇷 Ver em Português";
+  });
+
+
+  toggleButton.innerHTML = "🇧🇷 Ver em Português";
 }
-// Inicializa bolhas nas laterais com Paper.js
+
+
 function initBubbleEffect() {
   const canvas = document.getElementById('bubbleCanvas');
   if (!canvas) return;
@@ -35,7 +43,7 @@ function initBubbleEffect() {
   const colors = ['#41B883', '#FDDD62', '#6CB6FF'];
   const bubbles = [];
 
-  // Cria bolhas nas laterais
+
   function createBubble() {
     const side = Math.random() < 0.5 ? 'left' : 'right';
     const x = side === 'left' ? width * 0.05 : width * 0.95;
@@ -55,15 +63,14 @@ function initBubbleEffect() {
     });
   }
 
-  // Gera bolhas a cada intervalo
+  
   setInterval(createBubble, 1000);
 
-  // Animação
+
   paper.view.onFrame = () => {
     bubbles.forEach((bubble, index) => {
       bubble.circle.position.y -= bubble.speed;
 
-      // Remove bolha ao sair da tela
       if (bubble.circle.position.y < -50) {
         bubble.circle.remove();
         bubbles.splice(index, 1);
