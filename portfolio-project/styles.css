@@ -4,3 +4,6 @@
   --warm-brown: #6b4e3d;
   --soft-beige: #f5f0e6;
 }
+body {
+  background-color: var(--soft-beige);
+}
