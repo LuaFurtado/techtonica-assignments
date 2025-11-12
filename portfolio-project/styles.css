@@ -11,6 +11,16 @@ body {
   font-family: 'Poppins', 'Helvetica', sans-serif;
   line-height: 1.6;
 }
+.makeColorful {
+  display: inline-block;
+  background: linear-gradient(to right, var(--green-moss), var(--blush-pink), var(--warm-brown));
+  background-size: 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+}
 /* social media icons */
 .social-media img {
   width: 32px;
