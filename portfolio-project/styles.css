@@ -19,3 +19,6 @@ body {
   margin: 0 8px;
   transition: transform 0.2s ease;
 }
+.social-media img:hover {
+  transform: scale(1.1);
+}
