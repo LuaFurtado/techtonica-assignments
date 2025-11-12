@@ -3,7 +3,11 @@
   --blush-pink: #d6a7a1;
   --warm-brown: #6b4e3d;
   --soft-beige: #f5f0e6;
+  --text-dark:  #2e2a27;
 }
 body {
   background-color: var(--soft-beige);
+  color: var(--text-dark);
+  font-family: 'Poppins', 'Helvetica', sans-serif;
+  line-height: 1.6;
 }
