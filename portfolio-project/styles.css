@@ -11,6 +11,47 @@ body {
   font-family: 'Poppins', 'Helvetica', sans-serif;
   line-height: 1.6;
 }
+/* side by side */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* espaço entre imagem e texto */
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+/* circular pic */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid var(--warm-brown);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover */
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* text */
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  color: var(--green-moss);
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
 header {
   text-align: center;
   padding: 60px 20px 30px;
