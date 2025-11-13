@@ -6,6 +6,26 @@
   --soft-beige: #f5f0e6;
   --text-dark: #2e2a27;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+section {
+  height: 100vh;  
+  scroll-snap-align: start; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+}
 /* NAVBAR */
 .navbar {
   display: flex;
