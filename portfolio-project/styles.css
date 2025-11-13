@@ -24,7 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px; /* espaço entre imagem e texto */
+  gap: 40px;
   max-width: 900px;
   margin: 80px auto;
   padding: 20px;
@@ -66,16 +66,12 @@ header {
   padding: 60px 20px 30px;
 }
 
-/* colorful title */
-.makeColorful {
-  display: inline-block;
-  background: linear-gradient(to right, var(--green-moss), var(--blush-pink), var(--warm-brown));
-  background-size: 200%;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  font-family: 'Dancing Script', cursive;
+.site-title {
+  color: var(--green-moss);
+  font-family: 'Poppins', sans-serif;
   font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 /* ===== PROJECTS SECTION ===== */
