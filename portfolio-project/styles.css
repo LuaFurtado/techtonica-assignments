@@ -47,20 +47,29 @@ section {
   background: var(--green-moss);
   border-bottom: 4px solid var(--warm-brown);
   z-index: 1000;
+
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
+/* Nav links */
 .nav-links {
   display: flex;
   gap: 20px;
+  flex-shrink: 1;
 }
 
+/* Navbar links */
 .nav-links a {
   text-decoration: none;
   color: var(--soft-beige);
   font-weight: 600;
   font-size: 1rem;
+  white-space: nowrap;
+  transition: color 0.2s ease;
 }
 
+/* Hover effect */
 .nav-links a:hover {
   color: var(--blush-pink);
 }
