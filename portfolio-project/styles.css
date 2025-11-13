@@ -327,7 +327,10 @@ header {
   padding: 32px 36px; /* more padding */
   box-shadow: 0 4px 10px rgba(107, 78, 61, 0.15);
 }
-
+.contact-form:hover {
+  transform: scale(1.03);
+  transition: transform 0.25s ease;
+}
 /* Labels */
 .contact-form label {
   font-weight: 600;
