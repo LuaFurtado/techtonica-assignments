@@ -159,6 +159,47 @@ header {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+/* wrapper around carousel + buttons */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* scroll buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--warm-brown);
+  color: var(--soft-beige);
+  border: none;
+  padding: 10px 16px;
+  font-size: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--green-moss);
+}
+
+.carousel-btn.left {
+  left: -10px;
+}
+
+.carousel-btn.right {
+  right: -10px;
+}
+
+/* remove scrollbar */
+.projects-carousel::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* card */
 .project-card {
