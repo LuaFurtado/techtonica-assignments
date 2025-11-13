@@ -26,28 +26,36 @@ section {
   flex-direction: column;
   padding: 40px;
 }
-/* NAVBAR */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
   background: var(--green-moss);
   border-bottom: 4px solid var(--warm-brown);
+  z-index: 1000;
 }
+
 .nav-links {
   display: flex;
   gap: 20px;
 }
+
 .nav-links a {
   text-decoration: none;
   color: var(--soft-beige);
   font-weight: 600;
   font-size: 1rem;
 }
+
 .nav-links a:hover {
   color: var(--blush-pink);
 }
+
 /* ===== GLOBAL STYLES ===== */
 body {
   background-color: var(--soft-beige);
