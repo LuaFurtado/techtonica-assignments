@@ -6,47 +6,74 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
-  <title>Luana Furtado - Porfolio Page</title>
+  <title>Luana Furtado - Portfolio Page</title>
 </head>
+
 <body>
-    <header>
-  <h1 class="site-title">Luana Furtado</h1>
-  <p>Software Engineer in Training | Techtonica 2025 - 2026</p>
-</header>
+  <header>
+    <h1 class="site-title">Luana Furtado</h1>
+    <p>Software Engineer in Training | Techtonica 2025 - 2026</p>
+  </header>
 
- <section id="about">
-  <div class="about-container">
-    <img src="profile.jpg" alt="Photo of Luana Furtado smiling" class="profile-photo">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        I’m a Software Engineer in training who thrives on curiosity and creativity. Self-driven and resourceful, I enjoy exploring new ideas, solving problems, and turning challenges into opportunities for growth and connection.
-      </p>
-      <div class="social-media">
-    <a href="https://github.com/LuaFurtado" target="_blank">
-      <img src="github.png" alt="GitHub logo">
-    </a><a href="https://www.linkedin.com/in/luafurtado/" target="_blank">
-      <img src="in.png" alt="LinkedIn logo">
-    </a>
-  </div>
+  <section id="about">
+    <div class="about-container">
+      <img src="profile.jpg" alt="Photo of Luana Furtado smiling" class="profile-photo">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I’m a Software Engineer in training who thrives on curiosity and creativity. 
+          Self-driven and resourceful, I enjoy exploring new ideas, solving problems, 
+          and turning challenges into opportunities for growth and connection.
+        </p>
 
+        <div class="social-media">
+          <a href="https://github.com/LuaFurtado" target="_blank">
+            <img src="github.png" alt="GitHub logo">
+          </a>
+          <a href="https://www.linkedin.com/in/luafurtado/" target="_blank">
+            <img src="in.png" alt="LinkedIn logo">
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-<h2 class="section-title">Projects</h2>
-<div class="projects-container">
-  <div class="project-card">
-    <img src="thumbnail recipe page.png" alt="Preview of Bilingual Recipe Page" class="project-image">
-    <div class="project-info">
-      <h3>Bilingual Recipe Page</h3>
-      <p>A bilingual recipe page featuring translation toggle and animated bubbles using Paper.js.</p>
-      <a href="project-pages/recipe.html" class="project-link">Learn More</a>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="thumbnail recipe page.png" alt="Preview of Bilingual Recipe Page" class="project-image">
+        <div class="project-info">
+          <h3>Bilingual Recipe Page</h3>
+          <p>A bilingual recipe page featuring translation toggle and animated bubbles using Paper.js.</p>
+          <a href="project-pages/recipe.html" class="project-link">Learn More</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-  <p>© 2025 Luana Furtado</p>
-</footer>
+  <section class="contact-section" id="contact">
+  <h2>Contact Me</h2>
+  <p>If you’d like to connect, send me a message below, I’d love to hear from you!</p>
 
+  <form class="contact-form" action="#" method="post">
+    <label for="name">Name <span class="required">*</span></label>
+    <input type="text" id="name" name="name" required placeholder="Your name">
+
+    <label for="email">Email <span class="required">*</span></label>
+    <input type="email" id="email" name="email" required placeholder="your@email.com">
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+
+  <footer>
+    <p>© 2025 Luana Furtado. All rights reserved.</p>
+  </footer>
 </body>
 </html>
