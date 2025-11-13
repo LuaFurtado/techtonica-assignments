@@ -130,15 +130,19 @@ header {
   font-size: 2rem;
 }
 
-/* cards container */
-.projects-container {
+/* carousel container */
+.projects-carousel {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 20px;
+  gap: 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
 
 /* card */
 .project-card {
