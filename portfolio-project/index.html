@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- meta + fonts + css -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
@@ -10,29 +12,36 @@
 </head>
 
 <body>
+
+  <!-- navbar -->
   <header class="navbar">
-  <nav class="nav-links">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#blog">Blog</a>   <!-- Need to figure -->
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a> <!-- figure out later -->
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-
+  <!-- about section -->
   <section id="about">
     <div class="about-container">
+
+      <!-- profile picture -->
       <img src="profile.jpg" alt="Photo of Luana Furtado smiling" class="profile-photo">
+
+      <!-- about text -->
       <div class="about-text">
         <h2>About Me</h2>
         <p>
-     This year, I decided to say yes to new challenges and to the future I want to build. I’m a Software Engineer in training, focused on HTML, CSS, JavaScript, DOM manipulation, responsive design, accessibility, and Git/GitHub. I’m learning how to think like a developer, breaking problems down, experimenting, and growing with each iteration.
-I serve as the Vice President of Student Government at Calbright College, where I support student initiatives and help create a community rooted in empathy and collaboration. Leadership has shaped the way I approach tech, reminding me that communication and curiosity are as essential as technical skills.
-I’m Brazilian, a lifelong learner, and a creative who loves watercolor and exploring the intersection between art and technology. That blend inspires the way I design and think about user experience.
-Technology, for me, is where imagination becomes something real. It’s a space to transform ideas into solutions that matter.
-As Eminem says, success is my only option, failure is not.
+          This year, I decided to say yes to new challenges and to the future I want to build. I’m a Software Engineer in training, focused on HTML, CSS, JavaScript, DOM manipulation, responsive design, accessibility, and Git/GitHub. I’m learning how to think like a developer, breaking problems down, experimenting, and growing with each iteration.
+          I serve as the Vice President of Student Government at Calbright College, where I support student initiatives and help create a community rooted in empathy and collaboration. Leadership has shaped the way I approach tech, reminding me that communication and curiosity are as essential as technical skills.
+          I’m Brazilian, a lifelong learner, and a creative who loves watercolor and exploring the intersection between art and technology. That blend inspires the way I design and think about user experience.
+          Technology, for me, is where imagination becomes something real. It’s a space to transform ideas into solutions that matter.
+          As Eminem says, success is my only option, failure is not.
         </p>
 
+        <!-- social icons -->
         <div class="social-media">
           <a href="https://github.com/LuaFurtado" target="_blank">
             <img src="github.png" alt="GitHub logo">
@@ -45,48 +54,56 @@ As Eminem says, success is my only option, failure is not.
     </div>
   </section>
 
- <section id="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="projects-container">
-    <div class="project-card">
-      <img src="thumbnail recipe page.png" alt="Preview of Bilingual Recipe Page" class="project-image">
-      <div class="project-info">
-        <h3>Bilingual Recipe Page</h3>
-        <p>A bilingual recipe page featuring translation toggle and animated bubbles using Paper.js.</p>
-        <a href="https://luafurtado.github.io/Recipe-Page/"
-           class="project-link"
-           target="_blank"
-           rel="noopener noreferrer">
-          Learn More
-        </a>
+  <!-- projects section -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-container">
+      <div class="project-card">
+        <!-- project image -->
+        <img src="thumbnail recipe page.png" alt="Preview of Bilingual Recipe Page" class="project-image">
+
+        <!-- project text -->
+        <div class="project-info">
+          <h3>Bilingual Recipe Page</h3>
+          <p>A bilingual recipe page featuring translation toggle and animated bubbles using Paper.js.</p>
+
+          <!-- project link -->
+          <a href="https://luafurtado.github.io/Recipe-Page/"
+             class="project-link"
+             target="_blank"
+             rel="noopener noreferrer">
+            Learn More
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
+  <!-- contact section -->
   <section class="contact-section" id="contact">
-  <h2>Contact Me</h2>
-  <p>If you’d like to connect, send me a message below, I’d love to hear from you!</p>
+    <h2>Contact Me</h2>
+    <p>If you’d like to connect, send me a message below, I’d love to hear from you!</p>
 
-  <form class="contact-form" action="#" method="post">
-    <label for="name">Name <span class="required">*</span></label>
-    <input type="text" id="name" name="name" required placeholder="Your name">
+    <!-- contact form -->
+    <form class="contact-form" action="#" method="post">
+      <label for="name">Name <span class="required">*</span></label>
+      <input type="text" id="name" name="name" required placeholder="Your name">
 
-    <label for="email">Email <span class="required">*</span></label>
-    <input type="email" id="email" name="email" required placeholder="your@email.com">
+      <label for="email">Email <span class="required">*</span></label>
+      <input type="email" id="email" name="email" required placeholder="your@email.com">
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
 
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-
-
+  <!-- footer -->
   <footer>
     <p>© 2025 Luana Furtado. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
