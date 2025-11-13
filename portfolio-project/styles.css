@@ -164,6 +164,66 @@ header {
 .social-media img:hover {
   transform: scale(1.1);
 }
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background-color: var(--soft-beige);
+  padding: 80px 20px;
+  text-align: center;
+  border-top: 3px solid var(--warm-brown);
+}
+
+.contact-section h2 {
+  color: var(--green-moss);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  max-width: 480px;
+  margin: 0 auto 40px;
+  color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* form layout */
+.contact-form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: #fffaf5;
+  border: 2px solid var(--warm-brown);
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 10px rgba(107, 78, 61, 0.15);
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--green-moss);
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 2px solid var(--warm-brown);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background-color: var(--soft-beige);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--green-moss);
+  box-shadow: 0 0
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 600px) {
@@ -183,5 +243,10 @@ header {
 
   .project-image {
     max-width: 100%;
+  }
+
+  .contact-form {
+    width: 90%;
+    padding: 16px;
   }
 }
