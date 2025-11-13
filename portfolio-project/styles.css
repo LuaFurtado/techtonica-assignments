@@ -97,6 +97,11 @@ header {
   margin: 100px auto;
   padding: 40px 20px;
 }
+.about-text:hover {
+  transform: scale(1.03);
+  transition: transform 0.25s ease;
+}
+
 
 /* Profile image */
 .profile-photo {
