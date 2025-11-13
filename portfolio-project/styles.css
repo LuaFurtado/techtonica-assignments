@@ -120,12 +120,23 @@ header {
   line-height: 1.8;
   font-size: 1.25rem;
 }
+/* section container */
+#projects {
+  height: 100vh;
+  scroll-snap-align: start;    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
 
 /* projects title */
 .section-title {
   text-align: center;
   color: var(--green-moss);
-  margin-top: 60px;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-size: 2rem;
 }
@@ -133,22 +144,23 @@ header {
 /* carousel container */
 .projects-carousel {
   display: flex;
+  flex-wrap: nowrap;
   gap: 40px;
+
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  padding: 40px 20px;
+
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  padding: 40px 20px;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-.projects-carousel {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
+/* card */
 .project-card {
   list-style: none;
   background-color: var(--soft-beige);
@@ -159,6 +171,7 @@ header {
 
   width: 340px;
   min-width: 340px;
+
   padding: 20px;
 
   scroll-snap-align: center;
