@@ -143,6 +143,12 @@ header {
   scroll-behavior: smooth;
 }
 
+.projects-carousel {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .project-card {
   list-style: none;
   background-color: var(--soft-beige);
