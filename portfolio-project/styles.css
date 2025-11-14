@@ -387,6 +387,9 @@ header {
 .animated-title,
 .animated-text {
   opacity: 0;
+  transform: translateX(150vw);
+}
+.run-slide-in {
   animation: slide-in 1.4s ease forwards;
 }
 
