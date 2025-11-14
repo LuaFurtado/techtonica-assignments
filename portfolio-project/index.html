@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- meta + fonts + css -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
@@ -18,7 +17,7 @@
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#blog">Blog</a> <!-- figure out later -->
+      <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -32,13 +31,28 @@
 
       <!-- about text -->
       <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          This year, I decided to say yes to new challenges and to the future I want to build. I’m a Software Engineer in training, focused on HTML, CSS, JavaScript, DOM manipulation, responsive design, accessibility, and Git/GitHub. I’m learning how to think like a developer, breaking problems down, experimenting, and growing with each iteration.
-          I serve as the Vice President of Student Government at Calbright College, where I support student initiatives and help create a community rooted in empathy and collaboration. Leadership has shaped the way I approach tech, reminding me that communication and curiosity are as essential as technical skills.
-          I’m Brazilian, a lifelong learner, and a creative who loves watercolor and exploring the intersection between art and technology. That blend inspires the way I design and think about user experience.
-          Technology, for me, is where imagination becomes something real. It’s a space to transform ideas into solutions that matter.
-          As Eminem says, success is my only option, failure is not.
+        <h2 class="animated-title">About Me</h2>
+
+        <p class="animated-text">
+          This year, I decided to say yes to new challenges and to the future I want to build. 
+          I’m a Software Engineer in training focused on HTML, CSS, JavaScript, DOM manipulation, 
+          responsive design, accessibility, and Git/GitHub.
+        </p>
+
+        <p class="animated-text">
+          I serve as the Vice President of Student Government at Calbright College, where I support 
+          student initiatives and help create a community rooted in empathy and collaboration. Leadership 
+          has shaped the way I approach tech.
+        </p>
+
+        <p class="animated-text">
+          I’m Brazilian, a lifelong learner, and a creative who loves watercolor and exploring the 
+          intersection between art and technology.
+        </p>
+
+        <p class="animated-text">
+          Technology is where imagination becomes something real. As Eminem says: success is my only 
+          option, failure is not.
         </p>
 
         <!-- social icons -->
@@ -54,111 +68,67 @@
     </div>
   </section>
 
+  <!-- projects -->
+  <section id="projects">
+    <h2 class="section-title animated-title">Projects & Achievements</h2>
 
-<section id="projects">
-  <h2 class="section-title">Projects & Achievements</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left">‹</button>
 
+      <ul class="projects-carousel">
 
-  <div class="carousel-wrapper">
-  <button class="carousel-btn left">‹</button>
+        <!-- PROJECT 1 -->
+        <li class="project-card">
+          <img src="thumbnail recipe page.png"
+               alt="Screenshot of my bilingual recipe page showing the Brazilian carrot cake layout"
+               class="project-image">
+          <div class="project-info">
+            <h3>Bilingual Recipe Page</h3>
+            <p>A bilingual recipe page featuring translation toggle and animated bubbles using Paper.js.</p>
+            <a href="https://luafurtado.github.io/Recipe-Page/"
+               class="project-link"
+               target="_blank"
+               rel="noopener noreferrer">Learn More</a>
+          </div>
+        </li>
 
-  <ul class="projects-carousel">
+        <!-- PROJECT 2 -->
+        <li class="project-card">
+          <img src="Meet Luana .jpg" alt="Profile photo preview from Calbright College website" class="project-image">
+          <div class="project-info">
+            <h3>Calbright Student Profile</h3>
+            <p>Featured student spotlight highlighting my journey into tech and leadership.</p>
+            <a href="https://www.calbright.edu/student-life/students/luana/"
+               class="project-link"
+               target="_blank"
+               rel="noopener noreferrer">Learn More</a>
+          </div>
+        </li>
 
-    <!-- PROJECT 1 — recipe page -->
-    <li class="project-card">
-      <img src="thumbnail recipe page.png"
-           alt= "Screenshot of my bilingual recipe page showing the Brazilian carrot cake layout"
-           class="project-image">
+        <!-- PROJECT 3 -->
+        <li class="project-card">
+          <img src="project3.png" alt="Project 3 preview" class="project-image">
+          <div class="project-info">
+            <h3>Project 3</h3>
+            <p>Description for project 3.</p>
+            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Learn More</a>
+          </div>
+        </li>
 
-      <div class="project-info">
-        <h3>Bilingual Recipe Page</h3>
-        <p>A bilingual recipe page featuring translation toggle and animated bubbles using Paper.js.</p>
+      </ul>
 
-        <a href="https://luafurtado.github.io/Recipe-Page/"
-           class="project-link"
-           target="_blank"
-           rel="noopener noreferrer">
-          Learn More
-        </a>
-      </div>
-    </li>
+      <button class="carousel-btn right">›</button>
+    </div>
+  </section>
 
-    <!-- PROJECT 2 -->
-    <li class="project-card">
-  <img src="Meet Luana .jpg" alt="Profile photo preview from Calbright College website" class="project-image">
-  <div class="project-info">
-    <h3>Calbright Student Profile</h3>
-    <p>Featured student spotlight highlighting my journey into tech, lifelong learning, and leadership as ASCC Vice President.</p>
-    <a href="https://www.calbright.edu/student-life/students/luana/" 
-       class="project-link" 
-       target="_blank" 
-       rel="noopener noreferrer">
-       Learn More
-    </a>
-  </div>
-</li>
-
-    <!-- PROJECT 3 -->
-    <li class="project-card">
-      <img src="project3.png" alt="Project 3 preview" class="project-image">
-      <div class="project-info">
-        <h3>Project 3</h3>
-        <p>Description for project 3.</p>
-        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Learn More</a>
-      </div>
-    </li>
-
-    <!-- PROJECT 4 -->
-    <li class="project-card">
-      <img src="project4.png" alt="Project 4 preview" class="project-image">
-      <div class="project-info">
-        <h3>Project 4</h3>
-        <p>Description for project 4.</p>
-        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Learn More</a>
-      </div>
-    </li>
-
-    <!-- PROJECT 5 -->
-    <li class="project-card">
-      <img src="project5.png" alt="Project 5 preview" class="project-image">
-      <div class="project-info">
-        <h3>Project 5</h3>
-        <p>Description for project 5.</p>
-        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Learn More</a>
-      </div>
-    </li>
-
-    <!-- PROJECT 6 -->
-    <li class="project-card">
-      <img src="project6.png" alt="Project 6 preview" class="project-image">
-      <div class="project-info">
-        <h3>Project 6</h3>
-        <p>Description for project 6.</p>
-        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Learn More</a>
-      </div>
-    </li>
-
-    <!-- PROJECT 7 -->
-    <li class="project-card">
-      <img src="project7.png" alt="Project 7 preview" class="project-image">
-      <div class="project-info">
-        <h3>Project 7</h3>
-        <p>Description for project 7.</p>
-        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Learn More</a>
-      </div>
-    </li>
-
-  </ul>
-  <button class="carousel-btn right">›</button>
-</div>
-</section>
-
-  <!-- contact section -->
+  <!-- contact -->
   <section class="contact-section" id="contact">
-    <h2>Contact Me</h2>
-    <p>If you’d like to connect, send me a message below, I’d love to hear from you!</p>
+    <h2 class="animated-title">Contact Me</h2>
 
-    <!-- contact form -->
+    <p class="animated-text">
+      If you’d like to connect, send me a message below — I’d love to hear from you!
+    </p>
+
     <form class="contact-form" action="#" method="post">
       <label for="name">Name <span class="required">*</span></label>
       <input type="text" id="name" name="name" required placeholder="Your name">
@@ -174,12 +144,11 @@
   </section>
 
   <!-- footer -->
-<footer class="site-footer">
-  <div class="footer-line"></div>
-  <p>© 2025 Luana Furtado • Portfolio</p>
-</footer>
+  <footer class="site-footer">
+    <div class="footer-line"></div>
+    <p>© 2025 Luana Furtado • Portfolio</p>
+  </footer>
 
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
