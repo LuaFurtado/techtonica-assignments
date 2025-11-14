@@ -173,19 +173,25 @@
     <p class="animated-text">
       If you’d like to connect, send me a message below — I’d love to hear from you!
     </p>
+<form class="contact-form" action="#" method="post">
+  <label for="name">Name <span class="required">*</span></label>
+  <input type="text" id="name" name="name" required placeholder="Your name">
 
-    <form class="contact-form" action="#" method="post">
-      <label for="name">Name <span class="required">*</span></label>
-      <input type="text" id="name" name="name" required placeholder="Your name">
+  <label for="email">Email <span class="required">*</span></label>
+  <input type="email" id="email" name="email" required placeholder="your@email.com">
 
-      <label for="email">Email <span class="required">*</span></label>
-      <input type="email" id="email" name="email" required placeholder="your@email.com">
+  <label for="phone">Phone (optional)</label>
+  <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+  <label for="address">Address (optional)</label>
+  <input type="text" id="address" name="address" placeholder="Street, City, State">
 
-      <button type="submit">Send Message</button>
-    </form>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
   </section>
 
   <!-- footer -->

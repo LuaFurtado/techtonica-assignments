@@ -16,21 +16,11 @@ const elementsToAnimate = document.querySelectorAll('.animated-title, .animated-
 const scrollDetective = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      if (!entry.target.classList.contains('is-animating')) {
-        entry.target.classList.add('run-slide-in');
-        entry.target.classList.add('is-animating');
-      }
-    } else {
-      if (entry.intersectionRatio === 0) {
-        setTimeout(() => {
-          entry.target.classList.remove('run-slide-in');
-          entry.target.classList.remove('is-animating');
-        }, 300);
-      }
+      entry.target.classList.add('run-slide-in');
     }
   });
 }, {
-  threshold: [0, 0.4]
+  threshold: 0.3
 });
-
 elementsToAnimate.forEach(el => scrollDetective.observe(el));
+
