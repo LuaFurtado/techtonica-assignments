@@ -382,41 +382,21 @@ header {
   opacity: 0.8;
 }
 
-@keyframes grow-shrink {
-  25%,
-  75% {
-    scale: 100%;
-  }
-
-  50% {
-    scale: 200%;
-    color:  var(--green-moss);
-  }
-}
-p {
-  animation-duration: 3s;
-  animation-name: slide-in;
-}
-p span {
-  display: inline-block;
-  animation-duration: 3s;
-  animation-name: grow-shrink;
+/* Only elements you choose animate */
+.animated-title,
+.animated-text {
+  opacity: 0;
+  animation: slide-in 1.4s ease forwards;
 }
 
+/* ORIGINAL animation: comes from far right and slides in */
 @keyframes slide-in {
   from {
-    translate: 150vw 0;
-    scale: 200% 1;
+    transform: translateX(150vw); /* mesma lógica da sua animação original */
+    opacity: 0;
   }
-
   to {
-    translate: 0 0;
-    scale: 100% 1;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
-
-@keyframes grow-shrink {
-  25%,
-  75% {
-    scale: 100%;
-  }
