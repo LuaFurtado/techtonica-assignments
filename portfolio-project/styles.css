@@ -174,7 +174,7 @@ header {
   scroll-snap-type: x mandatory;
 
   width: 100%;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
   
   padding: 40px 0;
@@ -189,7 +189,7 @@ header {
   background: var(--warm-brown);
   color: var(--soft-beige);
   border: none;
-  padding: 10px 16px;
+  padding: 40px 16px;
   font-size: 2rem;
   border-radius: 8px;
   cursor: pointer;
@@ -197,16 +197,17 @@ header {
   transition: background 0.2s ease;
 }
 
+
 .carousel-btn:hover {
   background: var(--green-moss);
 }
 
 .carousel-btn.left {
-  left: -40px;
+  left: 20px;
 }
 
 .carousel-btn.right {
-  right: -40px;
+  right: 20px;
 }
 
 /* Remove scrollbar */
