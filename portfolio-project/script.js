@@ -17,8 +17,6 @@ const scrollDetective = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('run-slide-in');
-    } else {
-      entry.target.classList.remove('run-slide-in');
     }
   });
 }, {
