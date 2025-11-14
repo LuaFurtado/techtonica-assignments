@@ -359,6 +359,29 @@ header {
   border-color: var(--green-moss);
   box-shadow: 0 0;
 }
+
+.site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 60px;
+  scroll-snap-align: end;
+}
+
+.footer-line {
+  width: 120px;
+  height: 3px;
+  background-color: var(--warm-brown);
+  margin: 0 auto 16px auto;
+  border-radius: 2px;
+}
+
+.site-footer p {
+  font-size: 0.9rem;
+  color: var(--warm-brown);
+  opacity: 0.8;
+}
+
 @keyframes grow-shrink {
   25%,
   75% {
