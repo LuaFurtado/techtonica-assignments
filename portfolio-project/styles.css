@@ -367,7 +367,7 @@ header {
 
   50% {
     scale: 200%;
-    color: var(--green-moss);
+    color:  var(--green-moss);
   }
 }
 p {
