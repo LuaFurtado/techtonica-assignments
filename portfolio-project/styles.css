@@ -404,3 +404,9 @@ header {
     opacity: 1;
   }
 }
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
