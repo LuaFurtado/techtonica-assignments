@@ -24,6 +24,5 @@ const scrollDetective = new IntersectionObserver((entries) => {
 }, {
   threshold: 0.3
 });
-
 elementsToAnimate.forEach(el => scrollDetective.observe(el));
 
