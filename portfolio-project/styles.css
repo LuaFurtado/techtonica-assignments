@@ -52,23 +52,20 @@ section {
   overflow-x: hidden;
 }
 
-/* Nav links */
 .nav-links {
   display: flex;
-  gap: 20px;
-  flex-shrink: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-/* Navbar links */
-.nav-links a {
+.nav-left a,
+.nav-right a {
   text-decoration: none;
   color: var(--soft-beige);
-  font-weight: 600;
-  font-size: 1rem;
-  white-space: nowrap;
-  transition: color 0.2s ease;
+  margin: 0 15px;
+  font-weight: 400;
 }
-
 /* Hover effect */
 .nav-links a:hover {
   color: var(--blush-pink);
