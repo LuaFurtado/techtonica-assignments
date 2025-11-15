@@ -405,8 +405,48 @@ header {
   }
 }
 @media (max-width: 600px) {
+  section {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
   .about-container {
     flex-direction: column;
+    gap: 24px;
+    margin: 120px auto 40px auto;
+    padding: 20px;
     text-align: center;
+  }
+
+  .profile-photo {
+    width: 260px;
+    height: 260px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  #projects {
+    height: auto;
+    padding-top: 120px;
+  }
+
+  .projects-carousel {
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .contact-section {
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
   }
 }
