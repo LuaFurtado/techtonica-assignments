@@ -450,3 +450,36 @@ header {
     padding: 20px;
   }
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .about-container {
+    gap: 40px;
+    padding: 20px;
+    margin: 140px auto 60px;
+  }
+
+  .profile-photo {
+    max-width: 340px;
+    height: auto;
+  }
+
+  .about-text {
+    max-width: 90%;
+    font-size: 1.1rem;
+  }
+
+  .projects-carousel {
+    gap: 28px;
+    padding: 30px 0;
+  }
+
+  .project-card {
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  .contact-form {
+    max-width: 80%;
+    padding: 28px;
+  }
+}
