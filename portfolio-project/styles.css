@@ -1,6 +1,4 @@
-/* -----------------------------------------
-   COLORS
------------------------------------------ */
+/* Colors */
 :root {
   --green-moss: #4b6043;
   --blush-pink: #d6a7a1;
@@ -9,9 +7,7 @@
   --text-dark: #2e2a27;
 }
 
-/* -----------------------------------------
-   BASE
------------------------------------------ */
+/* Base */
 html {
   scroll-behavior: smooth;
 }
@@ -28,7 +24,12 @@ body {
   line-height: 1.6;
 }
 
-/* Layout */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Sections layout */
 section {
   height: 100vh;
   scroll-snap-align: start;
@@ -39,9 +40,7 @@ section {
   padding: 20px;
 }
 
-/* -----------------------------------------
-   NAVBAR
------------------------------------------ */
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -76,9 +75,7 @@ section {
   color: var(--blush-pink);
 }
 
-/* -----------------------------------------
-   HEADER
------------------------------------------ */
+/* Header */
 header {
   text-align: center;
   padding: 60px 20px 30px;
@@ -91,9 +88,7 @@ header {
   margin-bottom: 10px;
 }
 
-/* -----------------------------------------
-   ABOUT SECTION
------------------------------------------ */
+/* About section */
 .about-container {
   display: flex;
   align-items: center;
@@ -129,7 +124,7 @@ header {
   font-size: 1.25rem;
 }
 
-/* Hover */
+/* About hover effects */
 .about-text:hover {
   transform: scale(1.03);
   transition: transform 0.25s ease;
@@ -140,9 +135,7 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* -----------------------------------------
-   PROJECTS SECTION
------------------------------------------ */
+/* Projects section */
 #projects {
   height: 100vh;
   scroll-snap-align: start;
@@ -280,9 +273,7 @@ header {
   transform: scale(1.1);
 }
 
-/* -----------------------------------------
-   CONTACT SECTION
------------------------------------------ */
+/* Contact section */
 .contact-section {
   height: 100vh;
   display: flex;
@@ -374,9 +365,7 @@ header {
   border-color: var(--green-moss);
 }
 
-/* -----------------------------------------
-   FOOTER
------------------------------------------ */
+/* Footer */
 .site-footer {
   width: 100%;
   text-align: center;
@@ -399,9 +388,7 @@ header {
   opacity: 0.8;
 }
 
-/* -----------------------------------------
-   ANIMATIONS
------------------------------------------ */
+/* Animations */
 .animated-title,
 .animated-text {
   opacity: 1;
