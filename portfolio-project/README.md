@@ -1,3 +1,5 @@
+_This is my second project at Techtonica. I’m still getting more comfortable with HTML and CSS, and especially with JavaScript, which I know I need to keep practicing to understand better. I already added the blog section, but it’s not finished yet. I plan to use this website as my real portfolio and continue expanding it as I document my learning journey._
+
 # 🌿 **Personal Portfolio Website**
 
 This is my personal portfolio page that I built during the Techtonica program.  
@@ -74,7 +76,7 @@ Even though I couldn’t finish it, I learned a lot while practicing.
 To make the slide-in animation work smoothly while scrolling, I used a few browser tools that react to the page:
 
 ### • **IntersectionObserver**  
-Works like a *visibility detector* — it watches elements and tells me when they enter the viewport.  
+Works like a *visibility detector*, it watches elements and tells me when they enter the viewport.  
 When something becomes visible enough, the observer adds a CSS class and triggers the animation.
 
 ### • **animationend event**  
