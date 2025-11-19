@@ -1,3 +1,4 @@
+/* Small screens (mobile) */
 @media (max-width: 600px) {
   section {
     height: auto;
@@ -44,6 +45,9 @@
     padding: 20px;
   }
 }
+
+
+/* Medium screens (tablets) */
 @media (min-width: 601px) and (max-width: 1024px) {
 
   .about-container {
@@ -77,31 +81,9 @@
     padding: 28px;
   }
 }
-@media (min-width: 1200px) {
-  .contact-section {
-    padding: 120px 40px;
-  }
 
-  .contact-form {
-    max-width: 800px;
-    padding: 40px 48px;
-  }
 
-  .two-cols {
-    gap: 32px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 1.1rem;
-    padding: 14px;
-  }
-
-  .contact-form button {
-    font-size: 1.1rem;
-    padding: 14px 20px;
-  }
-}
+/* Large screens (laptops/desktops) */
 @media (min-width: 1025px) {
 
   .about-container {
@@ -127,6 +109,35 @@
   .project-card {
     max-width: 340px;
     padding: 28px;
+  }
+
+  .contact-form {
+    max-width: 800px;
+    padding: 40px 48px;
+  }
+
+  .two-cols {
+    gap: 32px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+
+  .contact-form button {
+    font-size: 1.1rem;
+    padding: 14px 20px;
+  }
+}
+
+
+/* Extra large screens (wide desktops) */
+@media (min-width: 1200px) {
+
+  .contact-section {
+    padding: 120px 40px;
   }
 
   .contact-form {
