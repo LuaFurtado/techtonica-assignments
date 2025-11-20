@@ -387,3 +387,25 @@ header {
   color: var(--warm-brown);
   opacity: 0.8;
 }
+
+/* Animations */
+.animated-title,
+.animated-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.run-slide-in {
+  animation: slide-in 1.4s ease forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(150vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

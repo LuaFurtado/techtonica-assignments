@@ -71,7 +71,7 @@ Even though I couldn’t finish it, I learned a lot while practicing.
 
 ## 🌀 **About the Animation Event Listeners**
 
-To make the slide-in animation work smoothly while scrolling, I used a few browser tools that react to the page:
+To make the slide-in animation work, I used a few browser tools that react to the page:
 
 ### • **IntersectionObserver**  
 Works like a *visibility detector*, it watches elements and tells me when they enter the viewport.  
@@ -87,7 +87,7 @@ Removing the class resets the element so the animation can run again when the us
 - `add()` starts the animation  
 - `remove()` resets it  
 
-All of these pieces together create a **lightweight**, **beginner-friendly**, scroll-based animation.
+All of these pieces together create a scroll-based animation.
 
 ---
 
