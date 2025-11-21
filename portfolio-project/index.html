@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Basic SEO: description and my information -->
+  <meta name="description" content="Portfolio of Luana Furtado — Software Engineer in Training, creator, developer, and lifelong learner." />
+  <meta name="author" content="Luana Furtado" />
+
+  <!-- Open Graph tags (used by Facebook, Instagram, LinkedIn, WhatsApp, etc.)  -->
+  <meta property="og:title" content="Luana Furtado | Portfolio" />
+  <meta property="og:description" content="Explore projects, highlights, and achievements from Luana Furtado — Software Engineer in Training." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Luana Furtado Portfolio" />
+  <meta property="og:url" content="https://LuaFurtado.github.io/" />
+  <meta property="og:image" content="profile.jpg" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Luana Furtado Portfolio" />
+  <meta name="twitter:description" content="Software Engineer in Training — projects, coding journey, and highlights." />
+  <meta name="twitter:image" content="profile.jpg" />
+
+  <!-- Google Analytics (my real ID: G-EBLYJP7X3D) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBLYJP7X3D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EBLYJP7X3D');
+  </script>
+
+  <!-- fonts and CSS files -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="media_queries.css">
+
+  <!-- favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+  <title>Luana Furtado - Portfolio Page</title>
+</head>
+
+
+<body>
+
+  <!-- navbar -->
+<header class="navbar">
+  <nav class="nav-links">
+    <div class="nav-left">
+      <a href="blog.html">Blog</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<h1 class="visually-hidden">Portfolio of Luana Furtado</h1>
+
+  <!-- about section -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="about-container">
+
+      <!-- profile picture -->
+      <img src="profile.jpg" alt="Photo of Luana Furtado smiling" class="profile-photo">
+
+      <!-- about text -->
+      <div class="about-text">
+        <h2 id="about-title" class="animated-title">About Me</h2>
+
+        <p class="animated-text">
+          This year, I decided to say yes to new challenges and to the future I want to build. 
+          I’m a Software Engineer in training focused on HTML, CSS, JavaScript, DOM manipulation, 
+          responsive design, accessibility, and Git/GitHub.
+        </p>
+
+        <p class="animated-text">
+          I serve as the Vice President of Student Government at Calbright College, where I support 
+          student initiatives and help create a community rooted in empathy and collaboration. Leadership 
+          has shaped the way I approach tech.
+        </p>
+
+        <p class="animated-text">
+          I’m Brazilian, a lifelong learner, and a creative who loves watercolor and exploring the 
+          intersection between art and technology.
+        </p>
+
+        <p class="animated-text">
+          Technology is where imagination becomes something real. As Eminem says: success is my only 
+          option, failure is not.
+        </p>
+
+        <!-- social icons -->
+        <div class="social-media">
+          <a href="https://github.com/LuaFurtado" target="_blank">
+            <img src="github.png" alt="GitHub logo">
+          </a>
+          <a href="https://www.linkedin.com/in/luafurtado/" target="_blank">
+            <img src="in.png" alt="LinkedIn logo">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- projects -->
+  <section id="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title" class="section-title animated-title">Projects & Achievements</h2>
+
+    <div class="carousel-wrapper">
+
+      <!-- BUTTON -->
+      <button class="carousel-btn left" aria-label="Scroll projects left">‹</button>
+
+      <ul class="projects-carousel" data-animated="true">
+
+        <!-- PROJECT 1 -->
+        <li class="project-card">
+          <img src="thumbnail recipe page.png"
+               alt="Screenshot of my bilingual recipe page showing the Brazilian carrot cake layout"
+               class="project-image">
+          <div class="project-info">
+            <h3>Bilingual Recipe Page</h3>
+            <p>A bilingual recipe page featuring translation toggle and animated bubbles using Paper.js.</p>
+            <a href="https://luafurtado.github.io/Recipe-Page/"
+               class="project-link"
+               target="_blank"
+               rel="noopener noreferrer">Learn More</a>
+          </div>
+        </li>
+
+        <!-- PROJECT 2 -->
+        <li class="project-card">
+          <img src="Meet Luana .jpg" alt="Profile photo preview from Calbright College website" class="project-image">
+          <div class="project-info">
+            <h3>Calbright Student Profile</h3>
+            <p>Featured student spotlight highlighting my journey into tech and leadership.</p>
+            <a href="https://www.calbright.edu/student-life/students/luana/"
+               class="project-link"
+               target="_blank"
+               rel="noopener noreferrer">Learn More</a>
+          </div>
+        </li>
+
+        <!-- PROJECT 3 -->
+      <li class="project-card">
+        <a href="https://app-na2.hubspot.com/academy/achievements/xr1vpnny/en/1/luana-furtado/hubspot-marketing-ai-micro-internship-program" target="_blank" rel="noopener noreferrer">
+          <img src="https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/ff562389a1e34044815a11fbd4a99aa0.png" alt="HubSpot Marketing AI Micro-Internship badge" class="project-image">
+        </a>
+        <div class="project-info">
+          <h3>HubSpot Marketing AI Micro-Internship</h3>
+          <p>Completed HubSpot’s hands-on micro-internship program focused on AI-powered marketing strategy and automation.</p>
+          <a href="https://app-na2.hubspot.com/academy/achievements/xr1vpnny/en/1/luana-furtado/hubspot-marketing-ai-micro-internship-program" class="project-link" target="_blank" rel="noopener noreferrer">View Badge</a>
+        </div>
+      </li>
+
+<!-- PROJECT 4 -->
+<li class="project-card">
+  <a href="https://verify.calbright.org/8f12a49b-0560-4ab7-bfdf-18ea209819cd#acc.ou6MRqHB" target="_blank" rel="noopener noreferrer">
+    <img src="CRM badge.png" alt="Calbright College CRM Platform Administration Certification" class="project-image">
+  </a>
+  <div class="project-info">
+    <h3>Calbright CRM Platform Administration Certification</h3>
+    <p>Earned Calbright College’s credential in CRM Platform Administration with hands-on experience using Salesforce and customer relationship tools.</p>
+    <a href="https://verify.calbright.org/8f12a49b-0560-4ab7-bfdf-18ea209819cd#acc.ou6MRqHB" class="project-link" target="_blank" rel="noopener noreferrer">View Certification</a>
+  </div>
+</li>
+
+
+<!-- PROJECT 5 -->
+<li class="project-card">
+  <img src="Luana award.png" 
+       alt="Collaboration Award certificate" 
+       class="project-image award-thumbnail">
+
+  <div class="project-info">
+    <h3>Collaboration Award</h3>
+    <p>Calbright College — Recognition for outstanding collaboration.</p>
+    <a href="Luana award.png" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="project-link">
+      View Full Size
+    </a>
+  </div>
+</li>
+
+
+
+<!-- PROJECT 6 -->
+<li class="project-card">
+  <img src="profile.jpg" alt="Project 6 preview" class="project-image">
+  <div class="project-info">
+    <h3>Project 6</h3>
+    <p>Description for project 6.</p>
+    <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Learn More</a>
+  </div>
+</li>
+
+<!-- PROJECT 7 -->
+<li class="project-card">
+  <img src="profile.jpg" alt="Project 7 preview" class="project-image">
+  <div class="project-info">
+    <h3>Project 7</h3>
+    <p>Description for project 7.</p>
+    <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Learn More</a>
+  </div>
+</li>
+
+      </ul>
+
+      <!-- BUTTON -->
+      <button class="carousel-btn right" aria-label="Scroll projects right">›</button>
+
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact" aria-labelledby="contact-title">
+  <h2 id="contact-title" class="animated-title">Contact Me</h2>
+
+  <p class="animated-text">
+    If you’d like to connect, send me a message below — I’d love to hear from you!
+  </p>
+
+  <form class="contact-form" action="#" method="post">
+
+    <div class="two-cols">
+      <div>
+        <label for="name">Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+
+      <div>
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com">
+      </div>
+    </div>
+
+    <div class="two-cols">
+      <div>
+        <label for="phone">Phone (optional)</label>
+        <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+      </div>
+
+      <div>
+        <label for="address">Address (optional)</label>
+        <input type="text" id="address" name="address" placeholder="Street, City, State">
+      </div>
+    </div>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+</section>
+</main>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="footer-line"></div>
+    <p>© 2025 Luana Furtado • Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+  
+
+</body>
+</html>
